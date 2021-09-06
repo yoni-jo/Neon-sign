@@ -1,0 +1,27 @@
+/* COMMON */
+
+::root {
+    /* COLOR */
+    --color_red: #ff0000;
+    --color_white: #fff;
+    --color_black: #000;
+
+    /* FONT SIZE */
+    --font_large:3rem;
+    --font_medium:1.5rem;
+    --font_small:1rem;
+    --font_tiny:.8rem;
+
+    /* FONT-WEIGHT */
+    --font_bolder:500;
+    --font_bold:400;
+    --font-ligher:200;
+    --font-thin:100;
+
+}
+
+html,
+body {
+    font-family: 'Azeret Mono', monospace;
+}
+
