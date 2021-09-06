@@ -8,16 +8,16 @@
     --color_black: #000;
 
     /* FONT SIZE */
-    --font_large:3rem;
-    --font_medium:1.5rem;
-    --font_small:1rem;
-    --font_tiny:.8rem;
+    --font_large: 3rem;
+    --font_medium: 1.5rem;
+    --font_small: 1rem;
+    --font_tiny: .8rem;
 
     /* FONT-WEIGHT */
-    --font_bolder:500;
-    --font_bold:400;
-    --font-ligher:200;
-    --font-thin:100;
+    --font_bolder: 500;
+    --font_bold: 400;
+    --font-ligher: 200;
+    --font-thin: 100;
 
 }
 
@@ -26,31 +26,63 @@ body {
     font-family: 'Azeret Mono', monospace;
 }
 
-section{
-    position:relative;
-    display:flex;
-    justify-content:center;
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(var(--color_red) ,rgba(0,0,0,.1)),url(../img/black-brick-wall-textured-background.jpg) no-repeat center; 
+    background: radial-gradient(var(--color_red), rgba(0, 0, 0, .1)), url(../img/black-brick-wall-textured-background.jpg) no-repeat center;
     background-blend-mode: multiply;
 }
 
-section::before{
+section::before {
     content: '';
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 800px;
-    height:800px;
-    background:radial-gradient(rgba(255, 0, 0,.75),transparent, transparent);
+    height: 800px;
+    background: radial-gradient(rgba(255, 0, 0, .75), transparent, transparent);
     border-radius: 50%;
 }
+
+
+h2 {
+    position: relative;
+    color: var(--color_white);
+    font-size: var(--font_large);
+    font-weight: var(--font_bolder);
+    text-shadow: 0 10px 10px var(--color_black);
+    box-shadow: 10px 0 0 var(--color_white);
+    animation: textTyping 5s steps(7) infinite;
+    overflow: hidden;
+    text-indent: 10px;
+
+}
+
+@keyframes textTyping {
+
+    0%,
+    100% {
+        width: 1px;
+    }
+
+    30%,
+    60% {
+        width: 230px;
+    }
+
+
+}
+
+
+
 /* ICON */
 
 
-.icon{
+.icon {
     width: 200px;
     height: 200px;
     z-index: 1;
@@ -58,9 +90,9 @@ section::before{
 }
 
 .icon svg path {
-    stroke : var(--color_white);
+    stroke: var(--color_white);
     stroke-width: 10px;
-    fill:transparent;
+    fill: transparent;
     filter: drop-shadow(0 20px 10px var(--color_black)) blur(2px);
-    
+
 }
