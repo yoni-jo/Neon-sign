@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* COMMON */
 
-::root {
+:root {
     /* COLOR */
     --color_red: #ff0000;
     --color_white: #fff;
@@ -32,7 +32,7 @@ section{
     justify-content:center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(red ,rgba(0,0,0,.1)),url(../img/black-brick-wall-textured-background.jpg) no-repeat center; 
+    background: radial-gradient(var(--color_red) ,rgba(0,0,0,.1)),url(../img/black-brick-wall-textured-background.jpg) no-repeat center; 
     background-blend-mode: multiply;
 }
 
@@ -47,10 +47,20 @@ section::before{
     background:radial-gradient(rgba(255, 0, 0,.75),transparent, transparent);
     border-radius: 50%;
 }
+/* ICON */
+
 
 .icon{
     width: 200px;
     height: 200px;
     z-index: 1;
     text-align: center;
+}
+
+.icon svg path {
+    stroke : var(--color_white);
+    stroke-width: 10px;
+    fill:transparent;
+    filter: drop-shadow(0 20px 10px var(--color_black)) blur(2px);
+    
 }
