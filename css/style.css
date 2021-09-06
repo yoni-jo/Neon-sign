@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* COMMON */
 
 ::root {
@@ -25,3 +26,28 @@ body {
     font-family: 'Azeret Mono', monospace;
 }
 
+section{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(red ,rgba(0,0,0,.1)),url(../img/black-brick-wall-textured-background.jpg) no-repeat center; 
+    background-blend-mode: multiply;
+}
+
+section::before{
+    content: '';
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 800px;
+    height:800px;
+    background:radial-gradient(rgba(255, 0, 0,.75),transparent, transparent);
+    border-radius: 50%;
+}
+
+.icon{
+    
+}
